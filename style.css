@@ -1,0 +1,74 @@
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color :black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .calculator {
+      background-color: rgb(161, 44, 44);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 350px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 12px;
+    }
+
+    #display {
+      width: 100%;
+      height: 60px;
+      font-size: 24px;
+      text-align: right;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      aspect-ratio: 1/1; /* button ko square rakhta hai */
+      font-size: 20px;
+      border: none;
+      border-radius: 8px;
+      background: #e0e0e0;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button:hover {
+      background: #d4d4d4;
+      transform: scale(1.05);
+    }
+
+    /* Small screens (mobiles) */
+    @media (max-width: 480px) {
+      #display {
+        height: 50px;
+        font-size: 20px;
+      }
+      button {
+        font-size: 18px;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 320px) {
+      #display {
+        height: 45px;
+        font-size: 18px;
+      }
+      button {
+        font-size: 16px
+      }}
